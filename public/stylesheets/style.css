@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@700&display=swap');
+#score {
+    font-size: 30px;
+    /* Font settings: sizing and a semi-transparent color */
+	font-size: 2.5rem;
+	color: #16202b52;
+	
+	/* Assigning an underwater image as the background */
+	background-image: url('https://w7.pngwing.com/pngs/183/509/png-transparent-under-water-scenery-sunlight-underwater-ray-star-ocean-atmosphere-cloud-computer-wallpaper.png');
+	
+	/* Clipping the background image to the outline of the text */
+	-webkit-background-clip:text;
+	
+	/* Setting a 10s infinite animation for a dynamic effect */
+	animation: waterEffect 10s infinite;
+
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+@font-face {
+    font-family: 'Rocher';
+    src: url(https://assets.codepen.io/9632/RocherColorGX.woff2);
+  }
+h1 {
+    font-family: 'Rocher';
+    margin: 0;
+    font-size: 60px;
+  }
+
+  @font-palette-values --Purples {
+    font-family: Rocher;
+    base-palette: 6;
+  }
+
+  .purples {
+    font-palette: --Purples;
+  }
+
+
+body{
+    background-image: url(../images/body.jpg);
+
+    background-size: cover;
+}
+
+#Canvas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#td1{
+    width: 700px;
+}
+
+#td2{
+    width: 300px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+.box {
+    transform: translate(-50%, -50%);
+    position: absolute;
+    padding: 20px 30px;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    cursor: pointer;
+    font: 16px/24px Arial, sans-serif;
+    background-color: #1ba5f5;
+    transition: 
+      box-shadow 0.4s ease, 
+      background-color 0.4s ease, 
+      color 0.4s ease;
+    box-shadow: 
+      0 0 2px 0 rgba(73, 115, 255, .1), 
+      0 0 4px 0 rgba(73, 115, 255, .2), 
+      0 0 6px 0 rgba(73, 115, 255, .3), 
+      0 0 8px 0 rgba(73, 115, 255, .4),
+      0 0 12px 0 rgba(73, 115, 255, .5), 
+      0 0 18px 0 rgba(73, 115, 255, .6);
+  }
+  
+  .box:hover{
+    background-color: #ea3c;
+    box-shadow: 
+      0 0 2px 0 rgba(238, 170, 51, 0.1), 
+      0 0 4px 0 rgba(238, 170, 51, 0.2), 
+      0 0 6px 0 rgba(238, 170, 51, 0.3), 
+      0 0 8px 0 rgba(238, 170, 51, 0.4),
+      0 0 12px 0 rgba(238, 170, 51, 0.5), 
+      0 0 18px 0 rgba(238, 170, 51, 0.6),
+      0 0 4px 0 rgba(238, 170, 51, 0.7);
+  }
+  
+  .box span {
+    color: #fff;
+    letter-spacing: 8px;
+  }
+  
+  .box i {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 200px;
+    background-color: inherit;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+    transition: 
+      transform 0.4s linear, 
+      top 1s linear;
+    overflow: hidden;
+  }
+  
+  .box i:before,
+  .box i:after {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -75%);
+  }
+  .box i:before {
+    border-radius: 46%;
+    background-color: rgba(20, 20, 20, 0.2);
+    animation: animate 5s linear infinite;
+  }
+  .box i:after {
+    border-radius: 40%;
+    background-color: rgba(20, 20, 20, 0.5);
+    animation: animate 10s linear infinite;
+  }
+  
+  @keyframes animate {
+    0% {
+      transform: 
+        translate(-50%, -75%) 
+        rotate(0deg);
+    }
+    100% {
+      transform: 
+        translate(-50%, -75%) 
+        rotate(360deg);
+    }
+  }
+
+footer{
+    text-align: center;
+}
